@@ -1,5 +1,7 @@
 package org.lr.parallel;
 
+import org.lr.data.Dog;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -10,47 +12,6 @@ import static java.lang.String.format;
 import static java.util.stream.Collectors.toList;
 
 public class ParallelStreams {
-    private interface Animal {
-        String name();
-
-        int age();
-
-        void eat();
-    }
-
-    public static final class Dog implements Animal {
-
-        private final String name;
-        private final int age;
-
-        public Dog(final String name, final int age) {
-            this.name = name;
-            this.age = age;
-        }
-
-        @Override
-        public String name() {
-            return name;
-        }
-
-        @Override
-        public int age() {
-            return age;
-        }
-
-        @Override
-        public void eat() {
-            System.out.println("dog eats meat");
-        }
-
-        @Override
-        public String toString() {
-            return "Dog{" +
-                    "name='" + name + '\'' +
-                    ", age=" + age +
-                    '}';
-        }
-    }
 
     public static void main(String[] args) {
         Random prng = new Random();
